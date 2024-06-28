@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beez131's macros</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html" id="homeLink">Home</a>
+        <a href="retromacro.html" id="servicesLink">Retro swarm challenge macro for BSS</a>
+        <a href="automessager.html" id="aboutLink">Auto Messager for discord</a>
+        <a href="contact.html" id="contactLink">Contact</a>
+    </nav>
+    <h1>Welcome to my Macro tutorial website</h1>
+    <a href="https://www.python.org/">
+    <img src="images/pythonlogo.png" height="200" alt="This is the python logo" title="Python logo">
+    </a>
+    <!-- This div will hold the output from PyScript -->
+    <div id="output"></div>
+
+    <!-- PyScript Configuration -->
+    <py-config>
+        packages = ["numpy", "pandas"]
+    </py-config>
+
+    <!-- PyScript Code Block -->
+    <py-script output="output">
+        # This prints 'hello world' in the webpage and not the terminal
+        print("I use python to make my scripts, they use libarys such as pyautogui, pydirectinput and more")
+        print("this means that my macros and scripts can be run across many OS, such as mac and linuix as well and windows")
+    </py-script>
+    <h1>What macros do we have?</h1>
+    <div id="output2"></div>
+    <py-script output="output2">
+        print("Currently i have made 2 macros, disocrd auto messager (bypasses bot detection) and a retro swarm challenge macro")
+        print("These macros get updated every so often for bugfixes and improvments, so please report and bugs to me")
+
+
+    </py-script>
+    <h2>Auto discord messager</h2>
+    <div id="output3"></div>
+    <py-script output="output3">
+        print("This sends messagers at a set random times, so dyno bot and others cannot detect it")
+        print("You can set which times you want it it will select one at random before typing again")
+        print("This macro uses Ctrl + V so it is easy to send any message and can also send images")
+        print("This macro Currently only works on 1080p, but i can help with using it with 4k")
+    </py-script>
+    <a href="https://drive.google.com/file/d/1KEDw9DFmCCXcd8gTPI0RbWf7Jq8ct9PL/view?usp=sharing">
+    <img src="images/automessagerui.png" height="200" alt="Auto discord messager UI" title="Messager macro UI">
+    </a>
+    <h2>Auto retro swarm challenge macro</h2>
+    <div id="output4"></div>
+    <py-script output="output4">
+        print("This macro can join the retro swarm challenge and get the sword, attack mobs then loop")
+        print("it uses image detection to see if it joins the lobby and when to exit, it can reopen roblox")
+        print("if it does not detect the image after 10 tries, to make the program more stable")
+    </py-script>
+    <img src="images/retrocave.png" height="200" alt="Retro cave" title="Retro cave">
+    <img src="images/retroshop1.png" width="590" alt="Retro shop" title="Retro Shop">
+
+    <py-script>
+        from js import document
+
+        def handle_click(event):
+            link_text = event.target.innerText
+
+        document.getElementById("homeLink").addEventListener("click", handle_click)
+        document.getElementById("servicesLink").addEventListener("click", handle_click)
+        document.getElementById("aboutLink").addEventListener("click", handle_click)
+        document.getElementById("contactLink").addEventListener("click", handle_click)
+</body>
+</html>
